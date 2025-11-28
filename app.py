@@ -52,7 +52,7 @@ def recompress_images(doc, quality=75, max_dim=None):
             buf_val = buf.getvalue()
 
             # Update image stream in PDF
-            doc.update_image(xref, stream=buf_val)
+            doc.update_stream(xref, stream=buf_val)
             recompressed_images += 1
 
     return total_images, recompressed_images
